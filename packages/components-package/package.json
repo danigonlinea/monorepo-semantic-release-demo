@@ -1,0 +1,12 @@
+{
+  "name": "components-package",
+  "private": "true",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Daniel González Jiménez",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "tokens-package": "0.0.0"
+  }
+}

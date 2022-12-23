@@ -1,0 +1,9 @@
+{
+  "name": "tokens-package",
+  "private": "true",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Daniel González Jiménez",
+  "license": "MIT",
+  "main": "index.js"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "monorepo-semantic-release-demo",
+  "private": "true",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+
+  },
+  "keywords": [
+    "monorepo",
+    "semantic-release"
+  ],
+  "author": "Daniel González Jiménez",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "resolutions": {
+    "coa": "2.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "dotenv": "^16.0.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.6",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "concurrently": "^7.5.0",
+    "semantic-release": "^19.0.5",
+    "semantic-release-monorepo": "^7.0.5",
+  }
+}
