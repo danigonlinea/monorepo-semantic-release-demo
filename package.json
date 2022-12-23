@@ -1,12 +1,12 @@
 {
   "name": "monorepo-semantic-release-demo",
-  "private": "true",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "release:all": "yarn release:components && yarn release:tokens",
-    "release:components": "yarn workspace components-package --debug -e --dry-run semantic-release-monorepo",
-    "release:tokens": "yarn workspace tokens-package --debug -e --dry-run semantic-release-monorepo"
+    "release:components": "yarn workspace components-package semantic-release --ci false --debug --dry-run -e semantic-release-monorepo",
+    "release:tokens": "yarn workspace tokens-package semantic-release --ci false --debug --dry-run -e semantic-release-monorepo"
   },
   "keywords": [
     "monorepo",
