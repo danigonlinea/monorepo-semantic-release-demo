@@ -6,7 +6,5 @@
   "author": "Daniel González Jiménez",
   "license": "MIT",
   "main": "index.js",
-  "dependencies": {
-    "tokens-demo-package": "0.0.0"
-  }
+  "dependencies": {}
 }
