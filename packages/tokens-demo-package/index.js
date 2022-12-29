@@ -27,8 +27,8 @@ export function multiply(a, b) {
 }
 
 /**
- * Divide two numbers together
+ * Divide two numbers
  */
-export function div(a, b) {
+export function division(a, b) {
   return a / b;
 }

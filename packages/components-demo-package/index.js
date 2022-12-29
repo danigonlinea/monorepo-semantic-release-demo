@@ -1,4 +1,4 @@
-// import { capitalize } from 'tokens-demo-package';
+import { capitalize } from 'tokens-demo-package';
 
-// console.log(capitalize('hello World, here we go!'));
+console.log(capitalize('hello World, here we go!'));
 console.log('Hello again!');
