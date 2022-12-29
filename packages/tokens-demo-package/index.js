@@ -15,7 +15,7 @@ export function sum(a, b) {
 /**
  * Substract two numbers together
  */
-export function substract(a, b) {
+export function minus(a, b) {
   return a - b;
 }
 
@@ -27,8 +27,8 @@ export function multiply(a, b) {
 }
 
 /**
- * Divide two numbers
+ * Divide two numbers together
  */
-export function division(a, b) {
+export function div(a, b) {
   return a / b;
 }
