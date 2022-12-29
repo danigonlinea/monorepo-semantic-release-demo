@@ -2,7 +2,7 @@
  * Capitalize an string
  */
 export function capitalize(str = '') {
-    return str.charAt(0).toUpperCase() + str.slice(1);
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 /**
@@ -26,3 +26,9 @@ export function multiply(a, b) {
   return a * b;
 }
 
+/**
+ * Divide two numbers together
+ */
+export function divide(a, b) {
+  return a / b;
+}
