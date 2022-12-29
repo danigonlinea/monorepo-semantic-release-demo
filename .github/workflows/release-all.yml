@@ -7,7 +7,7 @@ on:
       confirm:
         description: 'If you are sure, type "y"'
         required: true
-        default: 'no'
+        default: 'yes'
 
 jobs:
   release:
@@ -40,11 +40,11 @@ jobs:
           yarn workspace components-demo-package semantic-release --debug -e semantic-release-monorepo
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Release Tokens Demo Package
         run: |
           yarn workspace tokens-demo-package semantic-release --debug -e semantic-release-monorepo
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

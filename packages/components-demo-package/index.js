@@ -1,1 +1,3 @@
-console.log('hello World, here we go!');
+import { capitalize } from 'tokens-demo-package';
+
+console.log(capitalize('hello World, here we go!'));
