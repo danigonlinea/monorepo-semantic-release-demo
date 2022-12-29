@@ -5,14 +5,14 @@
   "description": "",
   "scripts": {
     "release:all": "yarn release:components && yarn release:tokens",
-    "release:components": "yarn workspace components-package semantic-release --ci false --debug --dry-run -e semantic-release-monorepo",
-    "release:tokens": "yarn workspace tokens-package semantic-release --ci false --debug --dry-run -e semantic-release-monorepo"
+    "release:components": "yarn workspace components-demo-package semantic-release --ci false --debug --dry-run -e semantic-release-monorepo",
+    "release:tokens": "yarn workspace tokens-demo-package semantic-release --ci false --debug --dry-run -e semantic-release-monorepo"
   },
   "keywords": [
     "monorepo",
     "semantic-release"
   ],
-  "author": "Daniel González Jiménez",
+  "author": "Daniel Gonzalez Jimenez",
   "license": "MIT",
   "workspaces": [
     "packages/*"

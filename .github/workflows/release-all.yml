@@ -1,0 +1,50 @@
+name: Release all packages
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'If you are sure, type "y"'
+        required: true
+        default: 'no'
+
+jobs:
+  release:
+    name: Publish Demo packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'yarn'
+
+      - name: Cache node_modules 📦
+        uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install package dependencies
+        run: |
+          yarn install
+
+      - name: Release Components Demo Package
+        run: |
+          yarn workspace components-demo-package semantic-release --debug -e semantic-release-monorepo
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
+
+      - name: Release Tokens Demo Package
+        run: |
+          yarn workspace tokens-demo-package semantic-release --debug -e semantic-release-monorepo
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
